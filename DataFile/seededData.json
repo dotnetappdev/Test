@@ -1,0 +1,162 @@
+{
+  "$id": "1",
+  "Products": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "ID": 1,
+        "ProductName": "Incredible Soft Chair",
+        "PricePerQuantity": 407.08
+      },
+      {
+        "$id": "4",
+        "ID": 2,
+        "ProductName": "Handmade Granite Computer",
+        "PricePerQuantity": 463.24
+      },
+      {
+        "$id": "5",
+        "ID": 3,
+        "ProductName": "Unbranded Metal Sausages",
+        "PricePerQuantity": 192.83
+      },
+      {
+        "$id": "6",
+        "ID": 4,
+        "ProductName": "Handcrafted Plastic Tuna",
+        "PricePerQuantity": 401.85
+      },
+      {
+        "$id": "7",
+        "ID": 5,
+        "ProductName": "Fantastic Granite Shirt",
+        "PricePerQuantity": 204.72
+      },
+      {
+        "$id": "8",
+        "ID": 6,
+        "ProductName": "Handcrafted Furniture",
+        "PricePerQuantity": 449.72
+      },
+      {
+        "$id": "9",
+        "ID": 7,
+        "ProductName": "Ergonomic Metal Car",
+        "PricePerQuantity": 331.17
+      },
+      {
+        "$id": "10",
+        "ID": 8,
+        "ProductName": "Intelligent Cotton Gloves",
+        "PricePerQuantity": 307.03
+      },
+      {
+        "$id": "11",
+        "ID": 9,
+        "ProductName": "Generic Rubber Bacon",
+        "PricePerQuantity": 40.22
+      },
+      {
+        "$id": "12",
+        "ID": 10,
+        "ProductName": "Refined Wooden Soap",
+        "PricePerQuantity": 33.89
+      }
+    ]
+  },
+  "Carts": {
+    "$id": "13",
+    "$values": [
+      {
+        "$id": "14",
+        "ID": 1,
+        "CustomerName": "Shaylee McGlynn",
+        "CartItems": null,
+        "TotalAmount": 0
+      },
+      {
+        "$id": "15",
+        "ID": 2,
+        "CustomerName": "Elnora Wolff",
+        "CartItems": null,
+        "TotalAmount": 0
+      },
+      {
+        "$id": "16",
+        "ID": 3,
+        "CustomerName": "Jovani Schmitt",
+        "CartItems": null,
+        "TotalAmount": 0
+      }
+    ]
+  },
+  "CartItems": {
+    "$id": "17",
+    "$values": [
+      {
+        "$id": "18",
+        "ID": 1,
+        "CartID": 3,
+        "ProductID": 5,
+        "Product": null,
+        "Quantity": 2,
+        "Amount": 0
+      },
+      {
+        "$id": "19",
+        "ID": 2,
+        "CartID": 1,
+        "ProductID": 9,
+        "Product": null,
+        "Quantity": 1,
+        "Amount": 0
+      },
+      {
+        "$id": "20",
+        "ID": 3,
+        "CartID": 2,
+        "ProductID": 8,
+        "Product": null,
+        "Quantity": 5,
+        "Amount": 0
+      },
+      {
+        "$id": "21",
+        "ID": 4,
+        "CartID": 2,
+        "ProductID": 2,
+        "Product": null,
+        "Quantity": 3,
+        "Amount": 0
+      },
+      {
+        "$id": "22",
+        "ID": 5,
+        "CartID": 1,
+        "ProductID": 2,
+        "Product": null,
+        "Quantity": 2,
+        "Amount": 0
+      },
+      {
+        "$id": "23",
+        "ID": 6,
+        "CartID": 1,
+        "ProductID": 7,
+        "Product": null,
+        "Quantity": 10,
+        "Amount": 0
+      },
+      {
+        "$id": "24",
+        "ID": 7,
+        "CartID": 1,
+        "ProductID": 10,
+        "Product": null,
+        "Quantity": 2,
+        "Amount": 0
+      }
+    ]
+  }
+}

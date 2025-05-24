@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(Solution) == true">
+		<DefineConstants>SOLUTION</DefineConstants>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="shoppingcart.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+    <PackageReference Include="System.Text.Json" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../ShoppingCart.Data/ShoppingCart.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(SolutionDir)/DataFile/**" CopyToOutputDirectory="PreserveNewest" DestinationFolder="$(OutDir)/DataFile" />
+  </ItemGroup>
+
+  <Target Name="RestoreLocalTools" BeforeTargets="Build" Condition="$(Solution) == true">
+    <Exec Command="dotnet tool restore" />
+  </Target>
+
+  <Target Name="GenerateOpenApiSpec" AfterTargets="Build" Condition="$(Solution) == true">
+    <Exec Command="dotnet tool run swagger tofile --output $(ProjectDir)docs\api-specs\shoppingcart-api-v1.json $(TargetDir)$(AssemblyName).dll v1" />
+  </Target>
+</Project>
